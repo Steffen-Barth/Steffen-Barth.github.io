@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bewerberprofil von Steffen Barth – Fachinformatiker für Systemintegration mit Fokus auf Systemadministration, Web- und Software-Entwicklung">
+    <meta name="author" content="Steffen Barth">
+    <title>Steffen Barth · Systemintegrator</title>
+
+    <!-- Theme früh setzen, damit kein Hell/Dunkel-Flackern beim Laden entsteht. -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('bewerberprofil-theme');
+                if (t !== 'light' && t !== 'dark') {
+                    t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                }
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Open Graph / Social-Sharing-Vorschau.
+         og:url und og:image müssen absolute URLs sein – bei eigener Domain oder
+         anderem Repo-Namen die Basis-URL unten anpassen. -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Steffen Barth · Systemintegrator">
+    <meta property="og:description" content="Bewerberprofil – Systemadministration, Web- und Software-Entwicklung & Testing.">
+    <meta property="og:url" content="https://steffen-barth.github.io/">
+    <meta property="og:image" content="https://steffen-barth.github.io/assets/profile.jpg">
+    <meta property="og:locale" content="de_DE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Steffen Barth · Systemintegrator">
+    <meta name="twitter:description" content="Bewerberprofil – Systemadministration, Web- und Software-Entwicklung & Testing.">
+    <meta name="twitter:image" content="https://steffen-barth.github.io/assets/profile.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#top" class="nav-brand">
+                <span class="dot"></span>
+                <span class="brand-name">Steffen Barth</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" data-de="// über" data-en="// about">// über</a></li>
+                <li><a href="#career" data-de="// werdegang" data-en="// career">// werdegang</a></li>
+                <li><a href="#skills" data-de="// skills" data-en="// skills">// skills</a></li>
+                <li><a href="#projects" data-de="// projekte" data-en="// projects">// projekte</a></li>
+                <li><a href="#contact" data-de="// kontakt" data-en="// contact">// kontakt</a></li>
+            </ul>
+            <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln">
+                <span class="lang-de">DE</span>
+                <span class="lang-sep">/</span>
+                <span class="lang-en">EN</span>
+            </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Hell-/Dunkelmodus wechseln">
+                <svg class="theme-icon icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+                </svg>
+                <svg class="theme-icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="top" class="hero">
+            <div class="container">
+                <p class="hero-tag" data-de="$ whoami" data-en="$ whoami">$ whoami</p>
+                <h1 class="hero-name">Steffen Barth</h1>
+                <h2 class="hero-role">
+                    <span class="bracket">&lt;</span><span data-de="Systemintegrator" data-en="System Integrator">Systemintegrator</span><span class="bracket"> /&gt;</span>
+                </h2>
+                <p class="hero-sub" data-de="Systemadministration · Webentwicklung · Software-Entwicklung &amp; Testing" data-en="System Administration · Web Development · Software Development &amp; Testing">
+                    Systemadministration · Webentwicklung · Software-Entwicklung &amp; Testing
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary" data-de="Kontakt aufnehmen" data-en="Get in touch">Kontakt aufnehmen</a>
+                    <a href="assets/Lebenslauf_Steffen_Barth.pdf" class="btn btn-ghost cv-download" download>
+                        <span data-de="CV herunterladen" data-en="Download CV">CV herunterladen</span>
+                        <span class="arrow">↓</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-grid" aria-hidden="true"></div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <span class="section-num">01</span>
+                    <h2 data-de="Über mich" data-en="About me">Über mich</h2>
+                </header>
+                <div class="about-grid">
+                    <div class="about-photo">
+                        <div class="photo-frame">
+                            <img src="assets/profile.jpg" alt="Steffen Barth" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="photo-placeholder">
+                                <span>SB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p data-de="Ich bin Steffen – derzeit in der Umschulung zum Fachinformatiker für Systemintegration. Parallel dazu entwickle ich seit Jahren in Java – vor allem Plugins für Minecraft-Server, Discord- und Twitch-Integrationen sowie kleinere Web-Tools – und betreibe meine eigene Infrastruktur auf einem dedizierten Server." data-en="I'm Steffen – currently retraining as IT Specialist for System Integration. Alongside the training I've been developing in Java for years – mainly plugins for Minecraft servers, Discord and Twitch integrations and small web tools – and I run my own infrastructure on a dedicated server.">
+                            Ich bin Steffen – derzeit in der Umschulung zum Fachinformatiker für Systemintegration. Parallel dazu entwickle ich seit Jahren in Java – vor allem Plugins für Minecraft-Server, Discord- und Twitch-Integrationen sowie kleinere Web-Tools – und betreibe meine eigene Infrastruktur auf einem dedizierten Server.
+                        </p>
+                        <p data-de="Mein Profil verbindet Systemadministration mit Software-Entwicklung und einem ausgeprägten Qualitätsbewusstsein. Ob Web-Anwendung, Server-Plugin oder Netzwerkkonfiguration – ich mag es, Systeme zum Laufen zu bringen, stabil zu halten und sauber zu dokumentieren." data-en="My profile combines system administration with software development and a strong focus on quality. Whether it's a web application, server plugin or network configuration – I enjoy making systems run, keeping them stable, and documenting them properly.">
+                            Mein Profil verbindet Systemadministration mit Software-Entwicklung und einem ausgeprägten Qualitätsbewusstsein. Ob Web-Anwendung, Server-Plugin oder Netzwerkkonfiguration – ich mag es, Systeme zum Laufen zu bringen, stabil zu halten und sauber zu dokumentieren.
+                        </p>
+                        <div class="quick-facts">
+                            <div class="fact">
+                                <span class="fact-label" data-de="Standort" data-en="Location">Standort</span>
+                                <span class="fact-value">Wiesloch, BW</span>
+                            </div>
+                            <div class="fact">
+                                <span class="fact-label" data-de="Fokus" data-en="Focus">Fokus</span>
+                                <span class="fact-value" data-de="Sysadmin · Web · Dev &amp; QA" data-en="Sysadmin · Web · Dev &amp; QA">Sysadmin · Web · Dev &amp; QA</span>
+                            </div>
+                            <div class="fact">
+                                <span class="fact-label" data-de="Verfügbar ab" data-en="Available from">Verfügbar ab</span>
+                                <span class="fact-value">06/2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="career" class="section section-alt">
+            <div class="container">
+                <header class="section-head">
+                    <span class="section-num">02</span>
+                    <h2 data-de="Werdegang" data-en="Career">Werdegang</h2>
+                </header>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">06/2024 – 06/2026</div>
+                        <div class="timeline-body">
+                            <h3 data-de="Umschulung Fachinformatiker für Systemintegration" data-en="Retraining as IT Specialist for System Integration">Umschulung Fachinformatiker für Systemintegration</h3>
+                            <p class="timeline-org">SRH Heidelberg</p>
+                            <p class="timeline-desc" data-de="Theoretische und praktische Ausbildung in Netzwerken, Servern, IT-Sicherheit und Systemadministration." data-en="Theoretical and practical training in networks, servers, IT security and system administration.">
+                                Theoretische und praktische Ausbildung in Netzwerken, Servern, IT-Sicherheit und Systemadministration.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date" data-de="im Rahmen der Umschulung" data-en="part of retraining">im Rahmen der Umschulung</div>
+                        <div class="timeline-body">
+                            <h3 data-de="Praktikum · Systemintegrator" data-en="Internship · System Integrator">Praktikum · Systemintegrator</h3>
+                            <p class="timeline-org">Feuerwehr &amp; Katastrophenschutz Stadt Mannheim</p>
+                            <p class="timeline-desc" data-de="Praxiseinsatz in der IT-Infrastruktur einer Behörde mit besonderen Anforderungen an Verfügbarkeit und Sicherheit." data-en="Hands-on work on the IT infrastructure of a public authority with special availability and security requirements.">
+                                Praxiseinsatz in der IT-Infrastruktur einer Behörde mit besonderen Anforderungen an Verfügbarkeit und Sicherheit.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">10/2022 – 11/2023</div>
+                        <div class="timeline-body">
+                            <h3 data-de="Verkäufer · Teilzeit" data-en="Sales Associate · Part-time">Verkäufer · Teilzeit</h3>
+                            <p class="timeline-org">Toom Baumarkt</p>
+                            <p class="timeline-desc" data-de="Kundenberatung, Warenpräsentation und Sortimentspflege im Baustoffhandel." data-en="Customer consulting, merchandising and assortment management in the building materials trade.">
+                                Kundenberatung, Warenpräsentation und Sortimentspflege im Baustoffhandel.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">09/2021 – 05/2022</div>
+                        <div class="timeline-body">
+                            <h3 data-de="Umschulung Elektroniker für Geräte und Systeme" data-en="Retraining as Electronics Technician for Devices and Systems">Umschulung Elektroniker für Geräte und Systeme</h3>
+                            <p class="timeline-org">SRH Mannheim</p>
+                            <p class="timeline-desc" data-de="Grundlagen der Elektronik, Messtechnik, Baugruppen­fertigung und Fehleranalyse." data-en="Fundamentals of electronics, measurement technology, assembly manufacturing and fault analysis.">
+                                Grundlagen der Elektronik, Messtechnik, Baugruppenfertigung und Fehleranalyse.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">07/2013 – 04/2019</div>
+                        <div class="timeline-body">
+                            <h3 data-de="Ausbildung/Geselle · Stuckateur" data-en="Apprenticeship/Journeyman · Plasterer">Ausbildung/Geselle · Stuckateur</h3>
+                            <p class="timeline-org">Rinhofer GmbH</p>
+                            <p class="timeline-desc" data-de="Mehrjährige Berufserfahrung mit Verantwortung für Qualität, Präzision und Termintreue." data-en="Several years of professional experience with responsibility for quality, precision and meeting deadlines.">
+                                Mehrjährige Berufserfahrung mit Verantwortung für Qualität, Präzision und Termintreue.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">09/2009 – 07/2012</div>
+                        <div class="timeline-body">
+                            <h3 data-de="Ausbildung zum Fleischer mit Qualifikation zum Koch" data-en="Apprenticeship as Butcher with Cook Qualification">Ausbildung zum Fleischer mit Qualifikation zum Koch</h3>
+                            <p class="timeline-org">Metzgerei Maier</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item education">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">07/2009</div>
+                        <div class="timeline-body">
+                            <h3 data-de="Hauptschulabschluss" data-en="Secondary School Certificate">Hauptschulabschluss</h3>
+                            <p class="timeline-org">Hilda-Schule, Schwetzingen</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <span class="section-num">03</span>
+                    <h2 data-de="Skills" data-en="Skills">Skills</h2>
+                </header>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3 data-de="Systemadministration" data-en="System Administration">Systemadministration</h3>
+                        <ul class="skill-tags">
+                            <li>Linux</li>
+                            <li data-de="Dedizierte Server" data-en="Dedicated Servers">Dedizierte Server</li>
+                            <li>Hetzner</li>
+                            <li data-de="Netzwerkverwaltung" data-en="Network Administration">Netzwerkverwaltung</li>
+                            <li data-de="Router-Konfiguration" data-en="Router Configuration">Router-Konfiguration</li>
+                            <li>Web-Server</li>
+                            <li>Hosting</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 data-de="Programmierung" data-en="Programming">Programmierung</h3>
+                        <ul class="skill-tags">
+                            <li>Java</li>
+                            <li>Paper / Spigot</li>
+                            <li>HTML &amp; CSS</li>
+                            <li>JavaScript</li>
+                            <li>Git / GitHub</li>
+                            <li>Discord API</li>
+                            <li>Twitch API</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 data-de="Software-Entwicklung &amp; Testing" data-en="Software Development &amp; Testing">Software-Entwicklung &amp; Testing</h3>
+                        <ul class="skill-tags">
+                            <li data-de="Testfall-Design" data-en="Test Case Design">Testfall-Design</li>
+                            <li data-de="Fehleranalyse" data-en="Defect Analysis">Fehleranalyse</li>
+                            <li data-de="Qualitätssicherung" data-en="Quality Assurance">Qualitätssicherung</li>
+                            <li data-de="Dokumentation" data-en="Documentation">Dokumentation</li>
+                            <li data-de="Versionsverwaltung" data-en="Version Control">Versionsverwaltung</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 data-de="Elektronik" data-en="Electronics">Elektronik</h3>
+                        <ul class="skill-tags">
+                            <li data-de="Löten &amp; Bauteile-Montage" data-en="Soldering &amp; Component Assembly">Löten &amp; Bauteile-Montage</li>
+                            <li data-de="Messtechnik &amp; Prüfen" data-en="Measurement &amp; Testing">Messtechnik &amp; Prüfen</li>
+                            <li data-de="Schaltpläne lesen / erstellen" data-en="Reading / Drawing Circuit Diagrams">Schaltpläne lesen / erstellen</li>
+                            <li data-de="Fehlersuche" data-en="Troubleshooting">Fehlersuche</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 data-de="Arbeitsweise" data-en="Work Style">Arbeitsweise</h3>
+                        <ul class="skill-tags">
+                            <li data-de="Eigenverantwortung" data-en="Ownership">Eigenverantwortung</li>
+                            <li data-de="Strukturiert &amp; analytisch" data-en="Structured &amp; analytical">Strukturiert &amp; analytisch</li>
+                            <li data-de="Qualitätsbewusstsein" data-en="Quality mindset">Qualitätsbewusstsein</li>
+                            <li data-de="Prozessoptimierung" data-en="Process improvement">Prozessoptimierung</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 data-de="Sprachen" data-en="Languages">Sprachen</h3>
+                        <ul class="skill-tags">
+                            <li data-de="Deutsch · Muttersprache" data-en="German · Native">Deutsch · Muttersprache</li>
+                            <li data-de="Englisch" data-en="English">Englisch</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <header class="section-head">
+                    <span class="section-num">04</span>
+                    <h2 data-de="Projekte" data-en="Projects">Projekte</h2>
+                </header>
+
+                <article class="project-feature">
+                    <div class="project-tag" data-de="Live · Eigenes Projekt" data-en="Live · Own project">Live · Eigenes Projekt</div>
+                    <h3 data-de="Eigene Server-Infrastruktur (Hetzner Dedicated)" data-en="Own Server Infrastructure (Hetzner Dedicated)">Eigene Server-Infrastruktur (Hetzner Dedicated)</h3>
+                    <p data-de="Ursprünglich als Heimnetzwerk gestartet, mittlerweile umgezogen auf einen dedizierten Hetzner-Server. Aktuell laufen darauf 3 Webseiten, 4 Gameserver und ein Discord-Bot – komplett selbst administriert, konfiguriert und gewartet." data-en="Originally started as a home network, now migrated to a dedicated Hetzner server. Currently hosting 3 websites, 4 gameservers and a Discord bot – fully self-administered, configured and maintained.">
+                        Ursprünglich als Heimnetzwerk gestartet, mittlerweile umgezogen auf einen dedizierten Hetzner-Server. Aktuell laufen darauf 3 Webseiten, 4 Gameserver und ein Discord-Bot – komplett selbst administriert, konfiguriert und gewartet.
+                    </p>
+                    <ul class="project-stack">
+                        <li>Linux</li>
+                        <li>Hetzner Dedicated</li>
+                        <li>Web Hosting</li>
+                        <li>Game Servers</li>
+                        <li>Discord Bot</li>
+                        <li>Networking</li>
+                    </ul>
+                </article>
+
+                <div class="sites-block">
+                    <header class="sites-head">
+                        <h3 data-de="Live im Einsatz" data-en="Live in production">Live im Einsatz</h3>
+                        <p class="sites-sub" data-de="Webseiten und Services, die auf meinem Hetzner-Server laufen" data-en="Websites and services running on my Hetzner server">
+                            Webseiten und Services, die auf meinem Hetzner-Server laufen
+                        </p>
+                    </header>
+                    <div class="sites-grid">
+                        <a class="site-card" href="https://eiskookie.com" target="_blank" rel="noopener">
+                            <span class="site-tag">Website</span>
+                            <h4 class="site-title">EisKookie</h4>
+                            <p class="site-domain">eiskookie.com</p>
+                            <p class="site-desc" data-de="Abenteuerlustige Polarfüchsin unterwegs auf Twitch und Social Media." data-en="Adventurous polar fox – Twitch and social media presence.">
+                                Abenteuerlustige Polarfüchsin unterwegs auf Twitch und Social Media.
+                            </p>
+                            <span class="site-arrow">→</span>
+                        </a>
+                        <a class="site-card" href="https://medienkompetenz-trainer.de" target="_blank" rel="noopener">
+                            <span class="site-tag">Website</span>
+                            <h4 class="site-title" data-de="Sicher im Netz" data-en="Sicher im Netz">Sicher im Netz</h4>
+                            <p class="site-domain">medienkompetenz-trainer.de</p>
+                            <p class="site-desc" data-de="Digitaler Übungsraum, um Medienkompetenz spielerisch zu lernen." data-en="Digital practice space to learn media literacy in a playful way.">
+                                Digitaler Übungsraum, um Medienkompetenz spielerisch zu lernen.
+                            </p>
+                            <span class="site-arrow">→</span>
+                        </a>
+                        <a class="site-card" href="https://boonbot.de" target="_blank" rel="noopener">
+                            <span class="site-tag" data-de="Discord-Bot" data-en="Discord Bot">Discord-Bot</span>
+                            <h4 class="site-title">BoonBot</h4>
+                            <p class="site-domain">boonbot.de</p>
+                            <p class="site-desc" data-de="Discord-Bot mit Web-Dashboard zur Verwaltung der Community." data-en="Discord bot with web dashboard for community management.">
+                                Discord-Bot mit Web-Dashboard zur Verwaltung der Community.
+                            </p>
+                            <span class="site-arrow">→</span>
+                        </a>
+                        <a class="site-card" href="https://booni-mc.de" target="_blank" rel="noopener">
+                            <span class="site-tag" data-de="Gameserver" data-en="Game Server">Gameserver</span>
+                            <h4 class="site-title">NewBeginnings</h4>
+                            <p class="site-domain">booni-mc.de</p>
+                            <p class="site-desc" data-de="Minecraft-Server mit Events, Minigames und einer eigenen Community." data-en="Minecraft server with events, minigames and a dedicated community.">
+                                Minecraft-Server mit Events, Minigames und einer eigenen Community.
+                            </p>
+                            <span class="site-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="sites-block">
+                    <header class="sites-head">
+                        <h3 data-de="Plugins &amp; Open Source" data-en="Plugins &amp; Open Source">Plugins &amp; Open Source</h3>
+                        <p class="sites-sub" data-de="Eigene Java-Plugins, öffentlich auf GitHub" data-en="My own Java plugins, public on GitHub">
+                            Eigene Java-Plugins, öffentlich auf GitHub
+                        </p>
+                    </header>
+                    <div class="sites-grid">
+                        <a class="site-card" href="https://github.com/BoondockSulfur/PerformanceAnalyzer" target="_blank" rel="noopener">
+                            <span class="site-tag">Java · Paper</span>
+                            <h4 class="site-title">PerformanceAnalyzer</h4>
+                            <p class="site-domain">github.com/BoondockSulfur/PerformanceAnalyzer</p>
+                            <p class="site-desc" data-de="Performance-Analyzer-Tool für Minecraft-Server. Misst, protokolliert und hilft Performance-Probleme einzugrenzen." data-en="Performance analyzer tool for Minecraft servers. Measures, logs and helps pinpoint performance issues.">
+                                Performance-Analyzer-Tool für Minecraft-Server. Misst, protokolliert und hilft Performance-Probleme einzugrenzen.
+                            </p>
+                            <span class="site-arrow">→</span>
+                        </a>
+                        <a class="site-card" href="https://github.com/BoondockSulfur/BanHammer" target="_blank" rel="noopener">
+                            <span class="site-tag">Java · Paper</span>
+                            <h4 class="site-title">BanHammer</h4>
+                            <p class="site-domain">github.com/BoondockSulfur/BanHammer</p>
+                            <p class="site-desc" data-de="Moderations-Plugin mit Preset-basiertem Strafsystem, Datenbank-Tracking, Discord-Webhooks und Essentials-Integration." data-en="Moderation plugin with preset-based punishment system, database tracking, Discord webhooks and Essentials integration.">
+                                Moderations-Plugin mit Preset-basiertem Strafsystem, Datenbank-Tracking, Discord-Webhooks und Essentials-Integration.
+                            </p>
+                            <span class="site-arrow">→</span>
+                        </a>
+                    </div>
+                    <p class="sites-foot">
+                        <span data-de="Alle Repositories auf GitHub:" data-en="All repositories on GitHub:">Alle Repositories auf GitHub:</span>
+                        <a href="https://github.com/BoondockSulfur" target="_blank" rel="noopener" class="github-profile-link">
+                            @BoondockSulfur <span class="arrow">→</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container contact-container">
+                <header class="section-head">
+                    <span class="section-num">05</span>
+                    <h2 data-de="Kontakt" data-en="Contact">Kontakt</h2>
+                </header>
+                <p class="contact-intro" data-de="Interesse an einer Zusammenarbeit oder Fragen zu meinem Profil? Schreib mir gerne." data-en="Interested in collaborating or have questions about my profile? Feel free to reach out.">
+                    Interesse an einer Zusammenarbeit oder Fragen zu meinem Profil? Schreib mir gerne.
+                </p>
+
+                <div class="contact-grid">
+                    <a href="mailto:barth.steffen@proton.me" class="contact-card">
+                        <span class="contact-label">E-Mail</span>
+                        <span class="contact-value">barth.steffen@proton.me</span>
+                    </a>
+                    <a href="https://github.com/Steffen-Barth" target="_blank" rel="noopener" class="contact-card">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">@Steffen-Barth</span>
+                    </a>
+                    <div class="contact-card contact-static">
+                        <span class="contact-label" data-de="Standort" data-en="Location">Standort</span>
+                        <span class="contact-value" data-de="Wiesloch · Baden-Württemberg, Deutschland" data-en="Wiesloch · Baden-Württemberg, Germany">Wiesloch · Baden-Württemberg, Deutschland</span>
+                    </div>
+                </div>
+
+                <div class="contact-cv cv-download">
+                    <a href="assets/Lebenslauf_Steffen_Barth.pdf" class="btn btn-primary btn-lg" download>
+                        <span data-de="Vollständigen Lebenslauf herunterladen (PDF)" data-en="Download full CV (PDF)">Vollständigen Lebenslauf herunterladen (PDF)</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <span>© <span id="year"></span> Steffen Barth</span>
+                <span class="footer-sep">·</span>
+                <span data-de="Erstellt mit HTML &amp; CSS · Gehostet auf GitHub Pages" data-en="Built with HTML &amp; CSS · Hosted on GitHub Pages">Erstellt mit HTML &amp; CSS · Gehostet auf GitHub Pages</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
